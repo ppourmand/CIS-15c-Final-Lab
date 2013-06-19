@@ -1,0 +1,49 @@
+Johnson Controls,42,1226,170000
+Fannie Mae,127,17220,7200
+Walmart,469,16999,22000000
+Dow Chemical,56,1182,53380
+Hess,38,2025,14775
+Oracle,37,9981,115000
+Microsoft,73,16978,94000
+Home Depot,74,4535,340000
+PepsiCo,65,6178,278000
+Goldman Sachs Group,41,7475,32400
+Cisco Systems,46,8041,66639
+Intel,53,11005,105000
+Ingram Micro,37,305,20800
+Target,73,2999,361000
+General Electric,146,13641,305000
+Humana,39,1222,43400
+Verizon Communication,115,875,183400
+Exxon Mobil,449,44880,88000
+Berkshire Hathaway,162,14824,288500
+Walt Disney,42,5682,166000
+DuPont,39,2788,70000
+Coca-Cola,48,9019,150900
+World Fuel Services,38,189,2490
+General Motors,152,6188,213000
+McKesson,122,1403,37700
+Proctor & Gamble,85,10756,126000
+Dell,56,2372,110050
+Enterprise Product Partners,42,2419,6600
+Chevron,233,26179,62000
+Sysco,42,1121,47800
+Phillips 66,169,4124,13500
+CVS Caremark,123,3876,164500
+Boeing,81,3900,174400
+Google,52,10737,53861
+Walgreen,71,2127,205500
+AT&T,127,7264,241810
+Lockheed Martin,47,2745,120000
+FedEx,42,2032,280241
+Costco Wholesale,99,1709,135000
+Lowe's,50,1959,202500
+Wells Fargo,91,18897,269200
+Valero Energy,138,2083,21671
+UnitedHealth Group,110,5526,133000
+Merck,47,6168,83000
+Ford Motor,134,5665,171000
+Abbott Laboratories,39,5962,92939
+CHS,40,1260,9495
+Safeway,44,596,171000
+United Parcel Service,54,807,310780
