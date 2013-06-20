@@ -199,7 +199,7 @@ int insertHash(DATA_HEAD *dataNode, COMPANY *dataInsert)
 /*		   0 for not found								*/
 int deleteHash(DATA_HEAD *dataNode, char *key)
 {
-	int index = -1, probe = 0, count = -1;
+	int index = -1, probe = 0;
 
 	index = hash(key, dataNode->arraySize);
 	probe++;
@@ -224,7 +224,7 @@ int deleteHash(DATA_HEAD *dataNode, char *key)
 	}
 	else
 	{
-		while(dataNode->pHash[index].status != 0 || dataNode->pHash[index].status == 2 && probe < MAX_PROBE)
+		while(dataNode->pHash[index].status != 0 || (dataNode->pHash[index].status == 2 && probe < MAX_PROBE))
 		{
 			index = collision(key, index, dataNode->arraySize);
 			probe++;
@@ -285,7 +285,7 @@ int searchHash(DATA_HEAD *dataNode, char *key, COMPANY *returnData)
 	}
 	else
 	{
-		while(dataNode->pHash[index].status != 0 || dataNode->pHash[index].status == 2 && probe < MAX_PROBE)
+		while(dataNode->pHash[index].status != 0 || (dataNode->pHash[index].status == 2 && probe < MAX_PROBE))
 		{
 			index = collision(key, index, dataNode->arraySize);
 			probe++;
