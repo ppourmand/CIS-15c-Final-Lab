@@ -16,10 +16,10 @@
 
 //Structure definition for data
 typedef struct{
-	char *companyName;
-	int revenuePerBillion;
-	int profitPerMillion;
-	int numberOfEmployees;
+    char *companyName;
+    int revenuePerBillion;
+    int profitPerMillion;
+    int numberOfEmployees;
 }COMPANY;
 
 /* bst node structure */
@@ -27,24 +27,24 @@ typedef struct bstNode
 {
     void * dataPtr;
     struct bstNode * left;
-	struct bstNode * right;
+    struct bstNode * right;
 }BST_NODE;
 
 /* bst header structure */
 typedef struct
 {
     int count;
-	int (*compare) (void * a, void * b);
+    int (*compare) (void * a, void * b);
     BST_NODE * root;
 }BST;
 
 //Hashed array structure
 typedef struct
 {
-	int status; //use 0 for empty, 1 for filled, 2 for deleted
-	int numOfCollisions;
-	int numOfProbes;
-	COMPANY* hashData;
+    int status; //use 0 for empty, 1 for filled, 2 for deleted
+    int numOfCollisions;
+    int numOfProbes;
+    COMPANY* hashData;
 }HASH;
 
 // stack node
@@ -63,11 +63,11 @@ typedef struct
 
 //Structure Definition for head node
 typedef struct{
-	int count;
-	int arraySize;
-	HASH *pHash;
-	BST *pTree;
-	STACK *pStack;
+    int count;
+    int arraySize;
+    HASH *pHash;
+    BST *pTree;
+    STACK *pStack;
 }DATA_HEAD;
 
 #endif

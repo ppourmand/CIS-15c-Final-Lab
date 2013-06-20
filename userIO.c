@@ -67,12 +67,12 @@ void printHashed(DATA_HEAD *data)
     //index value                key field(i.e. name)
     int i;
     printf("Index value:    Key Field:\n\n");
-	for (i = 0; i < data->arraySize; i++)
+    for (i = 0; i < data->arraySize; i++)
     {
         if (((data->pHash)[i]).status == 1) //status is filled, data exists at index
             printf("%-2d              %-10s\n", i, ((data->pHash)[i]).hashData->companyName);
-	}
-	printf("\n");
+    }
+    printf("\n");
 }
 //===================================================================
 // Prints the data in key sequence (alphabetically)
@@ -94,15 +94,15 @@ void processPrint (void *companyPtr)
 
     companyData = (COMPANY*)companyPtr;
 
-	printf("%-30s %-10d     %-10d           %-10d\n", companyData->companyName, companyData->revenuePerBillion, companyData->profitPerMillion, companyData->numberOfEmployees);
+    printf("%-30s %-10d     %-10d           %-10d\n", companyData->companyName, companyData->revenuePerBillion, companyData->profitPerMillion, companyData->numberOfEmployees);
 }
 //===================================================================
 //
 //===================================================================
 void printTree(DATA_HEAD *data)
 {
-	inRankOrder(data->pTree, processIndentedTree);
-	printf("\n");
+    inRankOrder(data->pTree, processIndentedTree);
+    printf("\n");
 }
 //===================================================================
 //
@@ -114,8 +114,8 @@ void processIndentedTree(void *companyPtr, int level)
 
     companyData = (COMPANY*)companyPtr;
 
-	for (i = 1; i < level; i++)
-		printf("  "); //format it for every level
+    for (i = 1; i < level; i++)
+        printf("  "); //format it for every level
     printf("%d. %-20s\n", level, companyData->companyName);
 }
 //===================================================================
@@ -125,16 +125,16 @@ char* allocateString(char str[])
 {
     char *strPtr;
 
-	strPtr = (char *)malloc(strlen(str) + 1);
-	if(strPtr != NULL)
-		strcpy(strPtr, str);
+    strPtr = (char *)malloc(strlen(str) + 1);
+    if(strPtr != NULL)
+        strcpy(strPtr, str);
     else
     {
         printf("Not enough memory, exiting program...\n");
         exit(1);
     }
 
-	return strPtr;
+    return strPtr;
 }
 //===================================================================
 // Prompts for a new company to insert.  If already exists, return
@@ -214,8 +214,8 @@ void deleteCompany(DATA_HEAD *data)
     else
         printf("Company is not in the list.\n");
 
-	free(companyPtr->companyName);
-	free(companyPtr);
+    free(companyPtr->companyName);
+    free(companyPtr);
     printf("\n");
 }
 //===================================================================
@@ -265,7 +265,7 @@ void undoDelete(DATA_HEAD *data)
         companyNode = (COMPANY*)popStack(data->pStack);
 
         //Check to see if there is duplicate
-		isDuplicate = searchHash(data, companyNode->companyName, companyNode);
+        isDuplicate = searchHash(data, companyNode->companyName, companyNode);
 
         //If there is, print and error, else, insert into the hashed array
         if(isDuplicate == 1)
@@ -278,9 +278,9 @@ void undoDelete(DATA_HEAD *data)
         {
             printf("%s reinserted into the system\n", companyNode->companyName);
             insertManager(data, companyNode);
-			updateCollision(data);
+            updateCollision(data);
             (data->count)++;
-			printf("\nNumber Of Data Records: %d\n", data->count);
+            printf("\nNumber Of Data Records: %d\n", data->count);
         }
     }
     else

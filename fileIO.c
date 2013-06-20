@@ -1,10 +1,10 @@
 
-/*      	File:	fileIO.c									*/
-/*	      Author:	Pasha and Jeanine Fallen Bailey             */
-/*   Assisted by:  	Michael Nguyen              				*/
-/*        Status:   Complete									*/
-/*	  Created on:	5/31/13										*/
-/*	Last updated:	6/17/13										*/
+/*          File:   fileIO.c                                    */
+/*        Author:   Pasha and Jeanine Fallen Bailey             */
+/*   Assisted by:   Michael Nguyen                              */
+/*        Status:   Complete                                    */
+/*    Created on:   5/31/13                                     */
+/*  Last updated:   6/17/13                                     */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -135,7 +135,7 @@ int myStringCompare(void* pcompany1, void* pcompany2)
 //===================================================================
 void cleanupData(DATA_HEAD *data)
 {
-	destroyBST(data->pTree, freeBST);
+    destroyBST(data->pTree, freeBST);
     destroyStack(data->pStack);
     free(data->pHash);
     free(data);
@@ -154,7 +154,7 @@ void freeBST(void* companyData)
 //===================================================================
 void saveToFile(DATA_HEAD* data)
 {
-	COMPANY* temp;
+    COMPANY* temp;
     FILE* outputFile;
     char filename[MAX_CHARS];
     int i, len;
@@ -192,17 +192,17 @@ void saveToFile(DATA_HEAD* data)
         if(data->pHash[i].status == 1) //status is filled, data exists at index
             fprintf(outputFile, "%s,%d,%d,%d\n", data->pHash[i].hashData->companyName, data->pHash[i].hashData->revenuePerBillion, data->pHash[i].hashData->profitPerMillion, data->pHash[i].hashData->numberOfEmployees);
     }
-	//need to free the company name as well as the company
-	//modifying stack ADT does not work since this is specific to this program
-	while(!emptyStack(data->pStack))
-	{
-		temp = (COMPANY*)popStack(data->pStack); //pop everything from the stack
-		free(temp->companyName); //free company name and then company
-		free(temp);
-	}
-	data->pStack->count = 0; //reset stack
-	data->pStack->top = NULL;
+    //need to free the company name as well as the company
+    //modifying stack ADT does not work since this is specific to this program
+    while(!emptyStack(data->pStack))
+    {
+        temp = (COMPANY*)popStack(data->pStack); //pop everything from the stack
+        free(temp->companyName); //free company name and then company
+        free(temp);
+    }
+    data->pStack->count = 0; //reset stack
+    data->pStack->top = NULL;
 
     fclose(outputFile);
-	printf("\n");
+    printf("\n");
 }

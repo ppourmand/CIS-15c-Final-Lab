@@ -1,8 +1,8 @@
-/*      	File:	userIO.h									*/
-/*	      Author:	Michael Nguyen								*/
-/*        Status:   Incomplete									*/
-/*	  Created on:	5/28/13										*/
-/*	Last updated:	5/28/13										*/
+/*          File:   userIO.h                                    */
+/*        Author:   Michael Nguyen                              */
+/*        Status:   Incomplete                                  */
+/*    Created on:   5/28/13                                     */
+/*  Last updated:   5/28/13                                     */
 
 #ifndef USERIO_H
 #define USERIO_H

@@ -1,8 +1,8 @@
-/*      	File:	main.c										*/
-/*	      Author:	Pasha Pourmand								*/
-/*        Status:   Incomplete									*/
-/*	  Created on:	5/27/13										*/
-/*	Last updated:	6/2/13										*/
+/*          File:   main.c                                      */
+/*        Author:   Pasha Pourmand                              */
+/*        Status:   Incomplete                                  */
+/*    Created on:   5/27/13                                     */
+/*  Last updated:   6/2/13                                      */
 
 //Header Files
 #include <stdio.h>
@@ -24,7 +24,7 @@
 int main()
 {
 
-	 //head node points to everything so we don't need to deal with the other structs
+     //head node points to everything so we don't need to deal with the other structs
     DATA_HEAD* node;
 
     //allocate head node
@@ -34,17 +34,17 @@ int main()
     if(!node){exit(1);}
 
     //Reads in the file and inputs into BST and Hashed Array
-	readInFile(node);
+    readInFile(node);
 
-	//Prints the user Menu
-	menuOptions(node);
+    //Prints the user Menu
+    menuOptions(node);
 
-	//Saves to a file, must clear out the stack (inside of the function)
-	saveToFile(node);
+    //Saves to a file, must clear out the stack (inside of the function)
+    saveToFile(node);
 
-	//Clears all memory
-	cleanupData(node);
-	// at the end of main, before return
+    //Clears all memory
+    cleanupData(node);
+    // at the end of main, before return
 // check if there's memory leak
 /*printf("\nMemory Check:\n");
 #ifdef _MSC_VER
@@ -52,12 +52,12 @@ int main()
 #endif
 // end of program
 system("pause");
-	*/return 0;
+    */return 0;
 }
 
 void menuOptions(DATA_HEAD *node)
 {
-	char userChoice;
+    char userChoice;
 
     do
     {
