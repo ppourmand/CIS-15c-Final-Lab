@@ -272,6 +272,7 @@ void undoDelete(DATA_HEAD *data)
         {
             printf("ERROR: DUPLICATE DATA\n");
             printf("%s has already been entered into the system\n", companyNode->companyName);
+            free(companyNode);
         }
         else
         {
