@@ -1,0 +1,12 @@
+# Nikita Kouevda
+# 2013/06/20
+
+# OS X Finder
+.DS_Store
+
+# Temporary Vim files
+*.swp
+
+# Output files
+*.o
+*.out
