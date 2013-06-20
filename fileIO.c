@@ -1,5 +1,5 @@
-/ *Jeanine Fallen Bailey, Michael Nguyen, Pasha Pourmand */
-/ *2013/06/20 */
+/* Jeanine Fallen Bailey, Michael Nguyen, Pasha Pourmand */
+/* 2013/06/20 */
 
 #include <stdio.h>
 #include <stdlib.h>
