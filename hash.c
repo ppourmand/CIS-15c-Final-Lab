@@ -28,16 +28,16 @@ int hash(char *key, int size)
 	for(count = 0; count < length; count++)
 	{
 		//ignore vowels
-		if(key[count] != 'a' && key[count] != 'e' && key[count] != 'i' && 
-			key[count] != 'o' && key[count] != 'u' && key[count] != 'A' && 
-			key[count] != 'E' && key[count] != 'I' && key[count] != 'O' && 
+		if(key[count] != 'a' && key[count] != 'e' && key[count] != 'i' &&
+			key[count] != 'o' && key[count] != 'u' && key[count] != 'A' &&
+			key[count] != 'E' && key[count] != 'I' && key[count] != 'O' &&
 			key[count] != 'U')
 		{
 			sumOfKey = key[count] + (sumOfKey % size);
 		}
 	}
 
-	//Modulo division 
+	//Modulo division
 	index = sumOfKey % size;
 
 	return index;
@@ -293,7 +293,7 @@ int searchHash(DATA_HEAD *dataNode, char *key, COMPANY *returnData)
 			{
 				//return data pointed to
 				*returnData =  *(dataNode->pHash[index].hashData);
-				
+
 				//exit while loop
 				break;
 			}
@@ -376,7 +376,7 @@ void printEfficiency(DATA_HEAD *dataNode)
 	//Print longest collision path without traversing through hashed array
 	if(multiple == -1)
 	{
-		printf("\n\nKEY: %s\n\n", dataNode->pHash[collisionIndex].hashData->companyName); 
+		printf("\n\nKEY: %s\n\n", dataNode->pHash[collisionIndex].hashData->companyName);
 
 		//print home address
 		printf(" (Home Address) => ");

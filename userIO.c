@@ -211,7 +211,7 @@ void deleteCompany(DATA_HEAD *data)
         printf("\nNumber Of Data Records: %d\n", data->count);
         pushStack(data->pStack, deletedPtr);
     }
-    else 
+    else
         printf("Company is not in the list.\n");
 
 	free(companyPtr->companyName);
@@ -263,7 +263,7 @@ void undoDelete(DATA_HEAD *data)
     if(!emptyStack(data->pStack))
     {
         companyNode = (COMPANY*)popStack(data->pStack);
-		
+
         //Check to see if there is duplicate
 		isDuplicate = searchHash(data, companyNode->companyName, companyNode);
 
